@@ -29,17 +29,15 @@ tabBtn.addEventListener("click", function() {
     })
 })
 
-function getStorage() {
+const getStorage = () =>
     // get localStorage of JSON myLeads array
     myLeads = JSON.parse(localStorage.getItem("myLeads"))
     if (myLeads === null) { myLeads = [] }
     render(myLeads)
-}
 
-function storeLead() {
+const storeLead = () =>
     // Store new JSON stringify myLeads array in localStorage
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
-}
 
 function render(e) {
     // render to the html, the current myLeads array
